@@ -43,31 +43,43 @@ const teamMembers = [
 
 console.log(teamMembers);
 
-const elementRowBoody = document.querySelector("row-body");
+const elementRowBoody = document.querySelector(".row .row-body");
 console.log(elementRowBoody);
 
-const elementCol30 = document.querySelector("col-30");
+const elementCol30 = document.querySelector(".col-30");
 console.log(elementCol30);
 
-const elementCardBody = document.getElementsByClassName("card-body");
+const elementCardBody = document.querySelector(".card-body");
 console.log(elementCardBody);
 
-const elementImgMember = document.getElementsByClassName("img-member");
+const elementImgMember = document.querySelector(".img-member");
 console.log(elementImgMember);
 
-const elementInformations = document.getElementsByClassName("informations");
-console.log(elementInformations);
+const elementInformationsMember = document.querySelector(
+  ".informations-member"
+);
+console.log(elementInformationsMember);
 
-const elementNameMember = document.getElementsByClassName("name-member");
+const elementNameMember = document.querySelector(".name-member");
 console.log(elementNameMember);
 
-const elementJobMember = document.getElementsByClassName("job-member");
-console.log(elementJobMember);
+const elementJobMember = document.querySelector(".job-member");
+console.log(elementRowBoody);
 
-const elementLinkMember = document.getElementsByClassName("link-member");
+const elementLinkMember = document.querySelector(".link-member");
 console.log(elementLinkMember);
 
-for (let i = 0; i < teamMembers.length; i++) {
-  elementRowBody.innerHtml += elementCol30;
+let currentCardBody = ``;
+for (let i = 0; i < 6; i++) {
+  currentCardBody += `<div class="card-body">
+            <img src="./img/${currentCardBody[i].image}" alt="${currentCardBody.name}" />
+            <div class="informations-member">
+              <h3>${currentCardBody[i].name}</h3>
+              <p>${currentCardBody[i].role}</p>
+              <a>${currentCardBody[i].email}</a>
+            </div>
+          </div>
+  `;
 }
-console.log(elementRowBody);
+
+elementCardBody.innerHTML = currentCardBody;
