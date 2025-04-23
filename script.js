@@ -37,49 +37,26 @@ const teamMembers = [
   },
 ];
 
-// quando seleziono una card, mi si apre la pagina dedicata
-
-// recupero elementi
-
+// Stampo array di oggetti con console.log
 console.log(teamMembers);
 
-const elementRowBoody = document.querySelector(".row .row-body");
-console.log(elementRowBoody);
+// Mi prendo elemento inerente alla classe row-body per fare aggiunta del HTML
+const elementRowBody = document.querySelector(".row-body");
+elementRowBody.innerHTML = "";
 
-const elementCol30 = document.querySelector(".col-30");
-console.log(elementCol30);
+console.log(elementRowBody);
 
-const elementCardBody = document.querySelector(".card-body");
-console.log(elementCardBody);
-
-const elementImgMember = document.querySelector(".img-member");
-console.log(elementImgMember);
-
-const elementInformationsMember = document.querySelector(
-  ".informations-member"
-);
-console.log(elementInformationsMember);
-
-const elementNameMember = document.querySelector(".name-member");
-console.log(elementNameMember);
-
-const elementJobMember = document.querySelector(".job-member");
-console.log(elementRowBoody);
-
-const elementLinkMember = document.querySelector(".link-member");
-console.log(elementLinkMember);
-
-let currentCardBody = ``;
-for (let i = 0; i < 6; i++) {
-  currentCardBody += `<div class="card-body">
-            <img src="./img/${currentCardBody[i].image}" alt="${currentCardBody.name}" />
+for (let i = 0; i < teamMembers.length; i++) {
+  elementRowBody.innerHTML += `<div class="col-30">
+          <div class="card-body">
+            <div>
+              <img class="img-member" src="./img/${teamMembers[i].img}" alt="${teamMembers[i].name}" />
+            </div>
             <div class="informations-member">
-              <h3>${currentCardBody[i].name}</h3>
-              <p>${currentCardBody[i].role}</p>
-              <a>${currentCardBody[i].email}</a>
+              <h3 class="name-member">${teamMembers[i].name}</h3>
+              <p class="job-member">${teamMembers[i].role}</p>
+              <a class="link-member" href="#">${teamMembers[i].email}</a>
             </div>
           </div>
-  `;
+        </div> `;
 }
-
-elementCardBody.innerHTML = currentCardBody;
