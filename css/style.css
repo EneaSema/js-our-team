@@ -9,7 +9,7 @@
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0;
-  max-width: 700px;
+  max-width: 1000px;
 }
 
 .row {
@@ -22,7 +22,6 @@
 
 .col-30 {
   width: 30%;
-  margin: 0, 16px;
 }
 
 .col-100 {
@@ -73,7 +72,7 @@ ul {
 
 .img-member {
   height: 50px;
-  width: 200px;
+  width: 80px;
   margin-right: 8px;
 }
 .informations {
@@ -86,9 +85,11 @@ ul {
 }
 .job-member {
   color: white;
-  font-size: small;
+  font-size: medium;
   font-weight: 300;
 }
 .link-member {
   color: lightskyblue;
+  font-size: medium;
+  font-weight: 300;
 }

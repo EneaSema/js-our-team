@@ -50,7 +50,7 @@ for (let i = 0; i < teamMembers.length; i++) {
   elementRowBody.innerHTML += `<div class="col-30">
           <div class="card-body">
             <div>
-              <img class="img-member" src="./img/${teamMembers[i].img}" alt="${teamMembers[i].name}" />
+              <img class="img-member" src="./${teamMembers[i].img}" alt="${teamMembers[i].name}"/>
             </div>
             <div class="informations-member">
               <h3 class="name-member">${teamMembers[i].name}</h3>
